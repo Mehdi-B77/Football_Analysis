@@ -28,6 +28,6 @@ if data:
         json.dump(data, f, indent=4)
     print('Données de football récupérées et enregistrées dans football_data.json')    
 else:
-    print('Aucune donnée récupérée.')
+    print('Aucune donnée récupérée , test.')
 
     

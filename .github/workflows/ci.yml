@@ -18,7 +18,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t football-api .
+        docker build -t football-api ./app
 
     - name: Run Docker container
       run: |
