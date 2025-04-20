@@ -1,0 +1,25 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Set up Docker
+      uses: docker/setup-buildx-action@v1
+
+    - name: Build Docker image
+      run: |
+        docker build -t football-api .
+
+    - name: Run Docker container
+      run: |
+        docker run football-api
